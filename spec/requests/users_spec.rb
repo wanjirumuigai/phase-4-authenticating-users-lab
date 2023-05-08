@@ -10,7 +10,7 @@ RSpec.describe "Users", type: :request do
       post "/login", params: { username: user1.username }
       get "/me"
 
-      expect(response.body).to include_json({ 
+      expect(response.body).to include_json({
         id: user1.id, username: user1.username
       })
     end
@@ -20,10 +20,10 @@ RSpec.describe "Users", type: :request do
       post "/login", params: { username: user2.username }
       get "/me"
 
-      expect(response.body).to include_json({ 
+      expect(response.body).to include_json({
         id: user2.id, username: user2.username
       })
     end
   end
-  
+
 end
